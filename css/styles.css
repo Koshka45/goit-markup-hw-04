@@ -5,6 +5,7 @@
     --btn-color: #F4f4fd;
     --second-color: #404BBF;
     --main-color: #FFFFFF;
+    --link-color: #8E8F99;
     --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
@@ -56,6 +57,7 @@ img{
 
 .header{ 
     border-bottom: 1px solid #E7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .container{
     width: 100%;
@@ -166,6 +168,8 @@ img{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  max-width: 1440px;
+  margin: 0 auto;
  
 }
 
@@ -207,6 +211,7 @@ img{
 .hero-btn:focus{
     background-color: var(--second-color);
     color: var(--main-color);
+    
 }
 /* --------------------TECHNO-------------------------------- */
 .techno{
@@ -217,6 +222,10 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    margin-bottom: 8px;
 }
 
 .techno-list{
@@ -257,13 +266,17 @@ img{
 
 /* -------------------TEAM-------------------------- */
 .team{
-    /* background-color: var(--btn-color); */
+    background-color: var(--btn-color);
     padding: 120px 0;
-    background-color: green;
 }
 .team-list{
     display: flex;
     flex-wrap: wrap;
+    gap: 24px;
+}
+.team-icon{
+    display: flex;
+    justify-content: center;
     gap: 24px;
 }
 .icon-item{
@@ -274,17 +287,29 @@ img{
     width: 100%;
     height: 100%;
     background-color: #4D5AE5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.icon-link:hover,
+.icon-link:focus{
+    background-color: var(--second-color);
+}
+.icon-soc{
+    fill: var(--btn-color);
 }
 .team-item{
     background-color: var(--main-color);
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 
 }
 .team-inner{
     padding: 32px 16px;
 }
-
+.customers-title,
 .doing-title,
 .team-title{
     font-weight: 700;
@@ -315,12 +340,43 @@ img{
     letter-spacing: 0.02em;
     color: var(--subtitle-color);
     text-align: center;
+    margin-bottom: 8px;;
+}
+/* -------------CUSTOMERS------------- */
+.customers{
+    padding: 120px 0;
+}
+.customers-list{
+    display: flex;
+    gap: 24px;
+}
+.customers-item{
+    flex-basis: calc((100% - 120px) / 6);
+    height: 88px;
+}
+.customers-link{
+    width: 100%;
+    height: 100%;
+    border: 1px solid #8E8F99;border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--link-color);
+}
+.customers-link:hover,
+.customers-link:focus{
+    background-color: var(--second-color);
+    color: var(--second-color);
 }
 
 /* ---------------FOOTER------------ */
 .footer{
     background-color: var(--title-color);
     padding: 100px 0;
+}
+.footer-wrap{
+    display: flex;
+    align-items: baseline;
 }
 .footer-logo{
     font-family: 'Raleway', sans-serif;
@@ -344,6 +400,48 @@ img{
     color: var(--btn-color);
     max-width: 264px;
    
+}
+.footer-social{
+    width: 208px;
+    height: 80px;
+}
+.footer-soc-list{
+    display: flex;
+    gap: 16px;
+}
+.footer-soc-item{
+    width: 40px;
+    height: 40px;
+}
+.footer-soc-link{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--transition);
+}
+.footer-soc-link:hover,
+.footer-soc-link:focus{
+    background-color: #31d0aa;
+}
+
+.footer-box{
+    margin-right: 120px;
+}
+.footer-soc-svg{
+    fill: var(--btn-color);
+}
+
+.social-subtitle{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-color);
+    margin-bottom: 16px;
 }
 
     
