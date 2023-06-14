@@ -291,6 +291,7 @@ img{
     justify-content: center;
     align-items: center;
     border-radius: 50%;
+    transition: background-color var(--transition);
 }
 .icon-link:hover,
 .icon-link:focus{
@@ -307,7 +308,7 @@ img{
 
 }
 .team-inner{
-    padding: 32px 16px;
+    padding: 32px 0;
 }
 .customers-title,
 .doing-title,
@@ -354,6 +355,9 @@ img{
     flex-basis: calc((100% - 120px) / 6);
     height: 88px;
 }
+.customers-svg{
+    fill: currentColor;
+}
 .customers-link{
     width: 100%;
     height: 100%;
@@ -362,10 +366,19 @@ img{
     justify-content: center;
     align-items: center;
     color: var(--link-color);
+    transition: background-color var(--transition),
+    color var(--transition);
 }
+
+
+
 .customers-link:hover,
 .customers-link:focus{
     background-color: var(--second-color);
+    
+}
+.customers-link:hover,
+.customers-link:focus{
     color: var(--second-color);
 }
 
@@ -421,7 +434,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: var(--transition);
+    transition: background-color var(--transition);
 }
 .footer-soc-link:hover,
 .footer-soc-link:focus{
@@ -471,9 +484,8 @@ img{
     padding: 12px 24px;
     border: 1px solid #E7E9FC;
     border-radius: 4px;
+    transition: color var(--transition), border-color var(--transition), box-shadow var(--transition);
 
-   
-    
 
 }
 .filters-btn:hover,
@@ -481,6 +493,8 @@ img{
     background-color: var(--second-color);
     color: var(--main-color);
     border: 1px solid transparent;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
 }
  
 
@@ -494,9 +508,41 @@ img{
 
     
 }
+.card-wrap{
+    position:relative;
+    overflow: hidden;
+}
+.card-text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #F4F4FD;
+    position: absolute;
+    top: 0;
+    padding: 40px 32px;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform var(--transition);
+}
+.banking-link:hover .card-text,
+.banking-link:focus .card-text{
+    transform: translateY(0%);
+}
+
 .card{
     width: calc((100% - 48px) / 3);
 
+}
+.banking-link{
+    display: block;
+    transition: box-shadow var(--transition);
+}
+.banking-link:hover,
+.banking-link:focus{
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .banking-add{
     padding: 32px 16px;
