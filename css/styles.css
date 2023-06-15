@@ -119,13 +119,15 @@ img{
     padding-top: 24px;
     padding-bottom: 24px;
     display: block;
-    transition: color var(--transition), 
-    background-color var(--transition),
-    box-shadow var(--transition);
+    transition: color var(--transition);
 }
 .header-link:hover,
 .header-link:focus{
     color: var(--second-color); 
+}
+.activ{
+    position: relative;
+    color: var(--second-color);
 }
 .activ::after{
     content: "";
@@ -157,11 +159,7 @@ img{
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--subtitle-color);
-    transition: color var(--transition), 
-    background-color var(--transition),
-    box-shadow var(--transition);
-    
-    
+    transition: color var(--transition);
 }
 .adress-link:hover,
 .adress-link:focus{
@@ -215,9 +213,9 @@ img{
     height: 56px;
     border: none;
     border-radius: 4px;
-    transition: color var(--transition), 
-    background-color var(--transition),
-    box-shadow var(--transition);
+    transition:
+    background-color var(--transition);
+
 }
 .hero-btn:hover,
 .hero-btn:focus{
@@ -378,7 +376,7 @@ img{
     justify-content: center;
     align-items: center;
     color: var(--link-color);
-    transition: background-color var(--transition),
+    transition: border-color var(--transition),
     color var(--transition);
 }
 
@@ -386,13 +384,10 @@ img{
 
 .customers-link:hover,
 .customers-link:focus{
-    background-color: var(--second-color);
-    
-}
-.customers-link:hover,
-.customers-link:focus{
+    border-color: var(--second-color);
     color: var(--second-color);
 }
+
 
 /* ---------------FOOTER------------ */
 .footer{
@@ -482,6 +477,9 @@ img{
     gap: 24px;
     margin-bottom: 72px;
   
+}
+.filters-item{
+    transition: color var(--transition), background-color var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
 .filters-btn{
