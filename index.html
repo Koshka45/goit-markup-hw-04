@@ -18,7 +18,7 @@
                 <nav class="header-navigation">
                     <a class="logo link" href="#">Web<span class="header-logo">Studio</span></a>
                     <ul class="header-list list">
-                        <li class="header-item"><a class="header-link link" href="./index.html"> Studio</a></li>
+                        <li class="header-item"><a class="header-link link activ" href="./index.html"> Studio</a></li>
                         <li class="header-item"><a class="header-link link" href="./portfolio.html">Portfolio</a></li>
                         <li class="header-item"><a class="header-link link" href="">Contacts</a></li>
                     </ul>
@@ -44,7 +44,7 @@
                             Effective Solutions for Your Business
                         </h1>
 
-                        <button class="hero-btn" type="button">Order Service</button>
+                        <button class="hero-btn" data-modal-open="" type="button">Order Service</button>
                     </div>
                 </section>
 
@@ -362,6 +362,15 @@
                         </div>
                     </div>
                 </footer>
-           
+                <div class="backdrop is-hidden" data-modal="">
+                    <div class="modal">
+                        <button class="modal-btn" type="button" data-modal-close="">
+                            <svg class="modal-btn-svg" width="8" height="8">
+                                <use href="/images/icons.svg#icon-krest"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <script src="./js/modal.js"></script>
             </body>
             </html>
